@@ -8,7 +8,7 @@
 
 * What is a branch and why would you use one?
 
-  A branch is a separate line of revisions to the original code, which is referred to as the 'master' branch. A developer would use a branch to make changes to and add/remove features from the original file without modifying the original file. If someone were to make a big mistake on their branch, the original file would be left intact.
+  A branch is a separate line of revisions to the original code, which is referred to as the 'master' branch. A developer would use a branch to make changes to and add/remove features from the original file without modifying the original file. If someone were to make a big mistake on their branch, the original file would be left intact.  
 
 * What is a commit? What makes a good commit message?
 
