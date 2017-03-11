@@ -12,7 +12,7 @@
 
 * What is a commit? What makes a good commit message?
 
-  When a developer makes a commit, the modifications made to the original code are saved as a sort of 'snapshot' in the local repo. As a result, a developer can look back at the revision history of a particular file by examining the contents in each 'snapshot' from every commit.
+  When a developer makes a commit, the modifications made to the original code are saved as a sort of 'snapshot' in the local repo. As a result, a developer can look back at the revision history of a particular file by examining the contents in each 'snapshot' from every commit. A good commit message gives someone else looking at the commit an idea of what was added or removed from the file.
 
 * What is a merge conflict?
 
