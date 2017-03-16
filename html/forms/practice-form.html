@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+<form name="practice" action="success.html" method="post">
+  <fieldset>
+    <div>
+    <label>Preferred Name</label>
+      <input type="text" name="personal-name" placeholder="Enter your preferred name">
+    </div>
+    <div>
+      <label>Enter your birthday:</label>
+      <input type="date" name="DOB">
+     </div>
+    <div>
+      <label>Preferred House</label>
+      <select name="house">
+      	<option value="gryffindor">Gryffindor</option>
+      	<option value="hufflepuff">Hufflepuff</option>
+      	<option value="ravenclaw">Ravenclaw</option>
+      	<option value="slytherin">Slytherin</option>
+      </select>
+    </div>
+    <div><label>Writing Prompt</label></div>
+    <textarea name="writingprompt"
+      rows="10" cols="50" placeholder="What is your favorite bertie botts' bean?"></textarea>
+    <div>
+    <input type="checkbox" name="cb-agree" value="agree">
+    I agree to the terms and conditions
+    </div>
+</fieldset>
+<button type="submit">Submit your Hogwarts Application</button>
+</form>
+</body>
+</html>
