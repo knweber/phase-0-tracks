@@ -1,0 +1,14 @@
+Release 0 :
+
+Walk up to elevator
+If you want to go to a lower floor, press the "down" button; otherwise, press the "up" button
+Walk forward into the elevator once the doors open
+Turn around to face the doors
+Look at the list of buttons numbered by floor
+ If you want to go to the pool, press "2"
+ If you want to go to the kitchen, press "3"
+ If you want to go to the laundry room, press "1"
+ If you want to go to the roof, press "4"
+ Otherwise, press "L"
+After pressing the button, wait for the elevator to move
+When the elevator doors open, walk straight out of the elevator
