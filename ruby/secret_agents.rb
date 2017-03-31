@@ -17,7 +17,7 @@ def encrypt()
 puts input
 end
 
-encrypt()
+#encrypt()
 
 
 # Input: encrypted password
@@ -57,4 +57,19 @@ def decrypt(input)
 puts input
 end
 
-decrypt(encrypt("swordfish"))
+#decrypt(encrypt("swordfish"))
+def question
+puts "Would you like to encrypt or decrypt a password?"
+answer = gets.chomp
+puts "What is your password?"
+pswrd = gets.chomp
+if answer == "encrypt"
+		encrypt(pswrd)
+	elsif answer == "decrypt"
+		decrypt(pswrd)
+	else
+		puts "Sorry, I didn't understand you"
+	end
+end
+
+question
