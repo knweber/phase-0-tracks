@@ -1,4 +1,4 @@
-Release 0 :
+Release 0:
 
 Walk up to elevator
 If you want to go to a lower floor, press the "down" button; otherwise, press the "up" button
@@ -12,3 +12,15 @@ Look at the list of buttons numbered by floor
  Otherwise, press "L"
 After pressing the button, wait for the elevator to move
 When the elevator doors open, walk straight out of the elevator
+
+Release 1:
+
+Getting Ready for a Run
+
+1. If it's cold outside, put pants on; otherwise, put shorts on
+2. If it's cold or windy, put a long-sleeved shirt on; otherwise, wear a t-shirt
+3. Once clothes are on, put on socks and shoes
+4. Stand up
+5. Walk to door
+6. If it's raining, start GPS inside; otherwise, open door, walk outside, close door, and start GPS
+7. When GPS beeps, press 'start' and begin to run
