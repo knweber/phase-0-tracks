@@ -27,10 +27,20 @@ encrypt()
 # Loop through the input
 # Output: final decrypted password
 
-def decrypt()
+def encrypt(input)
+	passwordlength = input.length
+	for i in 0...passwordlength
+	  if input[i] == 'z'
+	    input[i] = 'a'
+	   else
+		input[i] = input[i].next
+		end
+	end
+	return input
+end
+
+def decrypt(input)
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
-	puts "What is the encrypted password?"
-	input = gets.chomp
 	passwordlength = input.length
 	alphabetlength = alphabet.length
 	for i in 0...passwordlength
@@ -47,4 +57,4 @@ def decrypt()
 puts input
 end
 
-decrypt()
+decrypt(encrypt("swordfish"))
