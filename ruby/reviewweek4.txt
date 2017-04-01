@@ -1,0 +1,78 @@
+Kris Weber
+4/1/2017
+Review & Reflect Week 4
+
+I. Variables
+
+	1. What is a variable? Why might a programmer use a variable?
+
+
+	2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+
+
+II. Data Types
+
+	1. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program.
+
+		a. String
+
+			E.g. "Hello my name is Kris."
+
+		b. Integer
+
+			E.g. 4
+
+		c. Float
+
+		d. Nil
+
+		e. Boolean
+
+			E.g. false
+
+III. Algorithms
+
+	1. What is an algorithm?
+
+		A list of steps to solve a problem.
+
+	2. What are two common categories of algorithm in computer science?
+
+		Searching and sorting.
+
+IV. Methods
+
+	1. What is a method? Why might a programmer choose to use a method?
+
+	2. Define the following terms as they relate to a method. 
+
+		a. return value
+
+		b. side effect
+
+		c. parameter
+
+		d. argument
+
+		e. implicit return
+
+	3. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+
+
+V. Control Flow
+
+	1. What is control flow? Why might a programmer choose to use flow control?
+
+	2. Define the following terms as they relate to flow control.
+
+		a. loop
+
+		b. if
+
+		c. else
+
+		d. elsif
+
+		e. while
+
+		f. until
