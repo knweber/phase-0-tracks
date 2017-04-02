@@ -3,17 +3,20 @@ wolves_like_garlic = true
 vampires_like_sunshine = false
 vampires_like_garlic = false
 
-puts "How many employees will be processed?"
-n = gets.chomp
+def vampire_checker
 
-for i in 1..n 
-	puts "What is your name?"
-	name = gets.chomp
+	puts "How many employees will be processed?"
+	n = gets.chomp.to_i
 
-	puts "How old are you? What year were you born?"
+	for i in 1..n 
+		puts "What is your name?"
+		name = gets.chomp
+
+		puts "What year were you born?"
+		year = gets.chomp.to_i
 
 
-	puts "Our company cafeteria serves garlic bred. Should we order some for you? (y/n)"
+	puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
 	eat_bread = gets.chomp
 
 	if eat_bread == "y"
@@ -32,18 +35,24 @@ for i in 1..n
 		insurance == false
 	end
 
-	def vampire_checker
-		if age && (eat_bread || insurance)
+	
+	puts "Please name any allergies you may have"
+	input = gets.chomp 
+	until input == "done"
+
+		if (year >= 1917) && (eat_bread || insurance)
 			puts "Probably not a vampire"
-		elsif !age && (!eat_bread || !insurance)
+		elsif (year < 1917) && (!eat_bread || !insurance)
 			puts "Probably a vampire"
-		elsif !age && (!eat_bread && !insurance)
+		elsif (year< 1917) && (!eat_bread && !insurance)
 			puts "Almost certainly a vampire"
 		elsif name == "Drake Cula" || "Tu Fang"
 			puts "Definitely a vampire"
+		elsif input == "sunshine"
+			puts "Probably a vampire"
 		else
 			puts "Results inconclusive"
 		end
 	end
-	
+
 end
