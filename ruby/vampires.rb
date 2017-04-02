@@ -43,7 +43,7 @@ def vampire_checker
 			else 
 				if (year > 1917) && (eat_bread || insurance)
 					puts "Probably not a vampire"
-				elsif (year < 1917) && (eat_bread == false || insurance == false)
+				elsif (year < 1917) && (!eat_bread || !insurance)
 					puts "Probably a vampire"
 				elsif (year < 1917) && (eat_bread == false && insurance == false)
 					puts "Almost certainly a vampire"
