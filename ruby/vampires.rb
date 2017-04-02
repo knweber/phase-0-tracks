@@ -38,22 +38,27 @@ def vampire_checker
 		begin
 			puts("Please name any allergies you may have. Type 'done' once you are finished.")
 			input = gets.chomp 
-		end until input == "done"
-
-		if (year > 1917) && (eat_bread || insurance)
-			puts "Probably not a vampire"
-		elsif (year < 1917) && (!eat_bread || !insurance)
-			puts "Probably a vampire"
-		elsif input == "sunshine"
+			if input == "sunshine"
 				puts "Probably a vampire"
-		elsif (year< 1917) && (!eat_bread && !insurance)
-			puts "Almost certainly a vampire"
-		elsif name == "Drake Cula" || "Tu Fang"
-			puts "Definitely a vampire"
+			else 
+				if (year > 1917) && (eat_bread || insurance)
+					puts "Probably not a vampire"
+				elsif (year < 1917) && (eat_bread == false || insurance == false)
+					puts "Probably a vampire"
+				elsif (year < 1917) && (eat_bread == false && insurance == false)
+					puts "Almost certainly a vampire"
+				elsif name == "Drake Cula" || "Tu Fang"
+					puts "Definitely a vampire"
 
-		else
-			puts "Results inconclusive"
-		end
-	end
+				else
+					puts "Results inconclusive"
+				end
+			end
+		end until input == "done" || "sunshine"
 
+		
 end
+end
+
+
+vampire_checker
