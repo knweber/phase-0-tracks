@@ -16,40 +16,41 @@ def vampire_checker
 		year = gets.chomp.to_i
 
 
-	puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
-	eat_bread = gets.chomp
+		puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
+		eat_bread = gets.chomp
 
-	if eat_bread == "y"
-		eat_bread == true
-	else
-		eat_bread == false
-	end
+			if eat_bread == "y"
+				eat_bread == true
+			elsif eat_bread == "n"
+				eat_bread == false
+			end
 
 
-	puts "Would you like to enroll in the company's health insurance? (y/n)"
-	insurance = gets.chomp
+		puts "Would you like to enroll in the company's health insurance? (y/n)"
+		insurance = gets.chomp
 
-	if insurance == "y"
-		insurance == true
-	else
-		insurance == false
-	end
+			if insurance == "y"
+				insurance == true
+			elsif insurance == "n"
+				insurance == false
+			end
 
-	
-	puts "Please name any allergies you may have"
-	input = gets.chomp 
-	until input == "done"
+		begin
+			puts("Please name any allergies you may have. Type 'done' once you are finished.")
+			input = gets.chomp 
+		end until input == "done"
 
-		if (year >= 1917) && (eat_bread || insurance)
+		if (year > 1917) && (eat_bread || insurance)
 			puts "Probably not a vampire"
 		elsif (year < 1917) && (!eat_bread || !insurance)
 			puts "Probably a vampire"
+		elsif input == "sunshine"
+				puts "Probably a vampire"
 		elsif (year< 1917) && (!eat_bread && !insurance)
 			puts "Almost certainly a vampire"
 		elsif name == "Drake Cula" || "Tu Fang"
 			puts "Definitely a vampire"
-		elsif input == "sunshine"
-			puts "Probably a vampire"
+
 		else
 			puts "Results inconclusive"
 		end
