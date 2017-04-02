@@ -47,14 +47,14 @@ def vampire_checker
 					puts "Probably a vampire"
 				elsif (year < 1917) && (eat_bread == false && insurance == false)
 					puts "Almost certainly a vampire"
-				elsif name == "Drake Cula" || "Tu Fang"
+				elsif name == ("Drake Cula" || "Tu Fang")
 					puts "Definitely a vampire"
 
 				else
 					puts "Results inconclusive"
 				end
 			end
-		end until input == "done" || "sunshine"
+		end until input == ("done" || "sunshine")
 
 		
 end
