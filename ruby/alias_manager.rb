@@ -5,29 +5,16 @@
 #OUTPUT: spy name
 
 def spy_name(realname)
-	vowels = "aeiou"
-	consonants = "bcdfghjklmnpqrstvwxyz"
-	realname.split(" ")
-	realname.reverse!
-	for i in realname[0]
-		if realname[0][i].downcase.index(vowels) 
-			"a" == "e"
-			"e" == "i"
-			"i" == "o"
-			"o" == "u"
-			"u" == "a"
-		end
-		while realname[0][i] 
-	for j in realname[1]
-		if realname[1][i].downcase.index(vowels)
-			"a" == "e"
-			"e" == "i"
-			"i" == "o"
-			"o" == "u"
-			"u" == "a"
-		end
-
-	spyname
+	vowels = ['a','e','i','o','u']
+	consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+	realname.split("")
+	index = 0
+	while index < vowels.length
+		if realname.include? vowels[index]
+			realname[vowels][index] == realname[vowels][index + 1]
+		index += 1 
+	end
+	end
 end
 
 realname("Kris Weber")
