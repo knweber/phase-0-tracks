@@ -55,3 +55,7 @@ puts hogwarts[:gryffindor][:Harry][:description][1]
 
 #accessing hair color of Luna Lovegood:
 puts hogwarts[:ravenclaw][:Luna][:hairColor]
+
+#add extra quality to Luna:
+hogwarts[:ravenclaw][:Luna][:description].push("works for a wizarding magazine")
+puts hogwarts[:ravenclaw][:Luna][:description]
