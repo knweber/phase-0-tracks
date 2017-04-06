@@ -14,13 +14,13 @@ hogwarts = {
 			lastName: "Granger",
 			hairColor: "brown",
 			description: ["kind", "intelligent", "bushy hair"]
-		}
+		}}
 	hufflepuff: {
 		Cedric: {
 			lastName: "Diggory",
 			hairColor: "brown",
 			description: ["one of two Hogwarts champions", "dies"]
-		}
+		}}
 	ravenclaw: {
 		Luna: {
 			lastName: "Lovegood",
@@ -31,7 +31,7 @@ hogwarts = {
 			lastName: "Patil",
 			hairColor: "black",
 			description: ["has a twin", "went with Ron to Yule Ball"]
-		}
+		}}
 	slytherin: {
 		Draco: {
 			lastName: "Malfoy",
@@ -42,12 +42,10 @@ hogwarts = {
 			lastName: "Crabbe",
 			hairColor: "brown",
 			description: ["short", "eats cupcakes", "crony of Malfoy"]
-
 		} 
 		Gregory: {
 			lastName: "Goyle",
 			hairColor: "brown",
 			description: ["tall", "also eats cupcakes", "another crony of Malfoy"]
-
-		}
+		}}
 }
