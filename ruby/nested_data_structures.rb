@@ -2,7 +2,7 @@ hogwarts = {
 	gryffindor: {
 		Harry: {
 			lastName: "Potter",
-			hairColor: "brown",
+			hairColor: "black",
 			description: ["messy hair", "lightning bolt scar", "green eyes"]
 		}
 		Ron: {
@@ -19,15 +19,35 @@ hogwarts = {
 		Cedric: {
 			lastName: "Diggory",
 			hairColor: "brown",
-			description: []
+			description: ["one of two Hogwarts champions", "dies"]
 		}
 	ravenclaw: {
 		Luna: {
-			lastName: "Lovegood"
+			lastName: "Lovegood",
+			hairColor: "blonde",
+			description: ["intelligent", "creative", "good friend"]
 		}
-		Padma:
+		Padma: {
+			lastName: "Patil",
+			hairColor: "black",
+			description: ["has a twin", "went with Ron to Yule Ball"]
+		}
 	slytherin: {
-		Draco
-		Vincent 
-		Gregory
+		Draco: {
+			lastName: "Malfoy",
+			hairColor: "blonde",
+			description: ["manipulative", "misunderstood", "just a kid"]
+		}
+		Vincent: {
+			lastName: "Crabbe",
+			hairColor: "brown",
+			description: ["short", "eats cupcakes", "crony of Malfoy"]
+
+		} 
+		Gregory: {
+			lastName: "Goyle",
+			hairColor: "brown",
+			description: ["tall", "also eats cupcakes", "another crony of Malfoy"]
+
+		}
 }
