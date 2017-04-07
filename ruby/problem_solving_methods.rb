@@ -26,30 +26,19 @@ search_array([6,2,3,9,7,1],7)
 
 
 def fib(n)
-	answerArr = []
-	yield
-end
-
-answerArr.push((n.index-2)+(n.index-1))
-
-
-def fib(n)
- a = 0 
- b = 1
- n.times do
-   temp = a 
-   a = b
-   b = temp + b
+  array = [0,1] # x(old b) + new b 
+  a=0 
+  b=1 
+  (n-1).times do |n|
+  p array
+  x = b #old b
+  b = a + b # new b == sum of two
+  a = x # a == old b
+  array.push(b)
   end
-  return a 
-n.times do |n|
-  fibArray = []
-  result = fib(n)
-  fibArray.push(result)
-end 
 end
 
-p fib(7)
+fib(100)
 
 # 5.times do |n|
 #   result = fib(n)
