@@ -29,3 +29,12 @@ end
 fib(100)
 
 #RELEASE 2
+#PSEUDOCODE
+# 1. Input: array of integers
+# 2. Create new array 
+# 3. Move first integer from old array into new array
+# 4. Compare first integer to following integer (still in old array). If first integer is larger, insert second integer before; if first integer is smaller, insert second integer after in new array.
+# 5. If the two integers are equal, put the following integer after the first in the new array 
+# 6. Continue for the remaining integers in the old array -- compare the next value in the old array to the first, second, third...n values in the new array. If the value is smaller, put it before the next largest value; if it is larger, put it after.
+# 7. Return the final sorted new array! 
+
