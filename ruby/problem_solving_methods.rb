@@ -38,3 +38,26 @@ fib(100)
 # 6. Continue for the remaining integers in the old array -- compare the next value in the old array to the first, second, third...n values in the new array. If the value is smaller, put it before the next largest value; if it is larger, put it after.
 # 7. Return the final sorted new array! 
 
+def sort(arr)
+ arr2 = []
+ arr2[0] = arr[0]
+ arr.delete_at(0)
+ p arr2
+ index = 0
+ while index < arr.length
+ 	if arr[index] < arr2[index]
+ 	arr2.insert(index,arr[index])
+ 	elsif arr.include?(arr2)
+ 	arr2.insert(arr2.index(arr[index]),arr[index])
+ 	else
+  arr2.insert(index+1,arr[index]) 
+ 	end
+ 	index += 1
+ 	end
+   
+  arr2.sort
+ end
+   
+
+ sort([7,3,4,6,3])
+
