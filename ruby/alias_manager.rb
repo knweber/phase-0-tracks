@@ -25,5 +25,9 @@ fullName = twoNames[0] + " " + twoNames[1]
 p fullName
 end
 
-puts "Please type your name you wish to change"
-spy_name(gets.chomp)
+puts "Please type your name you wish to change. Type 'quit' to leave the program."
+input = gets.chomp
+until input == 'quit'
+  spy_name(input)
+  break
+end
