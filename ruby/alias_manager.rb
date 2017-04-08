@@ -25,4 +25,5 @@ fullName = twoNames[0] + " " + twoNames[1]
 p fullName
 end
 
-spy_name("Felicia Torres")
+puts "Please type your name you wish to change"
+spy_name(gets.chomp)
