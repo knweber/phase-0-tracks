@@ -40,4 +40,3 @@ until end_program == true
    aliases.push("#{input} is also known as #{spy_name(input)}")
  end 
  end
- end
