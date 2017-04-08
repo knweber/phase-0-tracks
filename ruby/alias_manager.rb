@@ -7,14 +7,7 @@
 def spy_name(realname)
 	vowels = ['a','e','i','o','u']
 	consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
-	realname.split("")
-	index = 0
-	while index < vowels.length
-		if realname.include? vowels[index]
-			realname[vowels][index] == realname[vowels][index + 1]
-		index += 1 
-	end
-	end
+	letteredName = realname.downcase.split("")
 end
 
-realname("Kris Weber")
+spy_name("Kris Weber")
