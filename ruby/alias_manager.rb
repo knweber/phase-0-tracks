@@ -7,7 +7,15 @@
 def spy_name(realname)
 	vowels = ['a','e','i','o','u']
 	consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
-	letteredName = realname.downcase.split("")
+	fullName = reverseName[0] + " " + reverseName[1]
+	letteredName = fullName.split('')
+ 	letteredName.map! do |letter|
+ 	  if vowels.include?(letter)
+ 	    vowels.rotate(1)[vowels.index(letter)]
+ 	  elsif consonants.include?(letter)
+ 	    consonants.rotate(1)[consonants.index(letter)]
+ 	  end
+ 	end
 end
 
 spy_name("Kris Weber")
