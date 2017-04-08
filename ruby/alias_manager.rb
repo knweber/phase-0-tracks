@@ -25,9 +25,19 @@ fullName = twoNames[0] + " " + twoNames[1]
 p fullName
 end
 
-puts "Please type your name you wish to change. Type 'quit' to leave the program."
-input = gets.chomp
-until input == 'quit'
-  spy_name(input)
+end_program = ""
+aliases = []
+
+until end_program == true 
+ puts "Please type your name you wish to change. Type 'quit' to leave the program."
+ input = gets.chomp 
+ if input == "quit"
+  end_program == true 
+  p aliases
   break
-end
+ else
+   spy_name(input)
+   aliases.push("#{input} is also known as #{spy_name(input)}")
+ end 
+ end
+ end
