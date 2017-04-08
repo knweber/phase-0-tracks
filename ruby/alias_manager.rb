@@ -15,7 +15,12 @@ def spy_name(realname)
  	  elsif consonants.include?(letter)
  	    consonants.rotate(1)[consonants.index(letter)]
  	  end
- 	end
+fullName = letteredName.join('').insert(reverseName[0].length,' ')
+fullName.capitalize!
+twoNames = fullName.split(" ")
+twoNames[1].capitalize!
+fullName = twoNames[0] + " " + twoNames[1]
+p fullName
 end
 
-spy_name("Kris Weber")
+spy_name("Felicia Torres")
