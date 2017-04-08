@@ -7,6 +7,7 @@
 def spy_name(realname)
 	vowels = ['a','e','i','o','u']
 	consonants = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+	reverseName = realname.downcase.split(" ").reverse!
 	fullName = reverseName[0] + " " + reverseName[1]
 	letteredName = fullName.split('')
  	letteredName.map! do |letter|
@@ -15,6 +16,7 @@ def spy_name(realname)
  	  elsif consonants.include?(letter)
  	    consonants.rotate(1)[consonants.index(letter)]
  	  end
+ 	end
 fullName = letteredName.join('').insert(reverseName[0].length,' ')
 fullName.capitalize!
 twoNames = fullName.split(" ")
