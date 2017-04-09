@@ -150,6 +150,21 @@ change_date(extinct_animals)
 # Do not use any special built-in methods.
 # ----
 
+def check_if_extinct(hash, str)
+currently_extinct = ""
+hash.each do |key, value|
+    if key == str 
+       currently_extinct = true
+       break
+    else
+      currently_extinct = false
+    end
+  end
+  p currently_extinct
+end
+
+check_if_extinct(extinct_animals,"Dodo")
+
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
 # Find the built-in method that helps you accomplish this in the Ruby documentation
