@@ -59,9 +59,9 @@ search_for(zombie_apocalypse_supplies, "compass")
 
 def downsize(arr)
 newArr = []
-until newArr.length == 5
-newArr.push(arr[rand(arr.length)])
-end
+	until newArr.length == 5
+		newArr.push(arr[rand(arr.length)])
+	end
 p newArr
 end
 
@@ -77,9 +77,9 @@ other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
 # ----
 
 def combine(arr1,arr2)
-newArr = arr1.concat(arr2)
-newArr.uniq!
-p newArr
+	newArr = arr1.concat(arr2)
+	newArr.uniq!
+	p newArr
 end
 
 combine(zombie_apocalypse_supplies, other_survivor_supplies)
