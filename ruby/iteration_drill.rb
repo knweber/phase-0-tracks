@@ -35,11 +35,22 @@ end
 
 alphabetize(zombie_apocalypse_supplies)
 
-
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
 # For instance: are boots in your list of supplies?
 # ----
+
+def search_for(arr, str)
+index = 0 
+while index < arr.length 
+  if arr[index] == str 
+    return true 
+  end
+  index += 1
+end
+end
+
+search_for(zombie_apocalypse_supplies, "compass")
 
 # 4. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
