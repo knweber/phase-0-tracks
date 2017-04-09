@@ -133,6 +133,15 @@ earlier(extinct_animals)
 # Do not use any special built-in methods.
 # ----
 
+def change_date(hash)
+hash.each do |key, value|
+    hash[key] = value - 3
+  end
+p hash
+end
+
+change_date(extinct_animals)
+
 # 4. You've heard that the following animals might be extinct, but you're not sure.
 # Check if they're included in extinct_animals, one by one:
 # "Andean Cat"
