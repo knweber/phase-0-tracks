@@ -23,6 +23,19 @@ asterisk(zombie_apocalypse_supplies)
 # in alphabetical order. Do not use any special built-in methods.
 # ----
 
+def alphabetize(arr)
+arr.each_index do |firstWord|
+  arr.each_index do |secondWord|
+    if arr[firstWord].downcase < arr[secondWord].downcase
+      arr[firstWord], arr[secondWord] = arr[secondWord], arr[firstWord]
+    end
+  end
+end
+end
+
+alphabetize(zombie_apocalypse_supplies)
+
+
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
 # For instance: are boots in your list of supplies?
