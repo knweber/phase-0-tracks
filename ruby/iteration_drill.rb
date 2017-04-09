@@ -170,3 +170,13 @@ check_if_extinct(extinct_animals,"Dodo")
 # Find the built-in method that helps you accomplish this in the Ruby documentation
 # for Hashes.
 # ----
+
+def is_still_alive(hash, str)
+  whoops_its_alive = hash.assoc(str)
+  hash.delete(str)
+  p hash 
+  p whoops_its_alive
+end
+
+is_still_alive(extinct_animals,"Passenger Pigeon")
+
