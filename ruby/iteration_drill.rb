@@ -57,6 +57,16 @@ search_for(zombie_apocalypse_supplies, "compass")
 # leaving only 5. Do not use any special built-in methods.
 # ----
 
+def downsize(arr)
+newArr = []
+until newArr.length == 5
+newArr.push(arr[rand(arr.length)])
+end
+p newArr
+end
+
+downsize(zombie_apocalypse_supplies)
+
 # 5. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
 # and their supplies below. You should get rid of any duplicate items.
