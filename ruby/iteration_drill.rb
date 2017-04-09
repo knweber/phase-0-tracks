@@ -7,6 +7,18 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 # printing each item in the array separated by an asterisk
 # ----
 
+def asterisk(arr)
+index = 0
+newStr = ""
+while index < arr.length 
+   newStr += arr[index] + "*"
+   index += 1 
+  end
+  p newStr
+end
+
+asterisk(zombie_apocalypse_supplies)
+
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
 # ----
