@@ -1,4 +1,6 @@
 class Santa
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
 
 	def speak
 		puts "Ho, ho, ho! Haaaaappy holidays!"
@@ -16,21 +18,7 @@ class Santa
 		@age = 0
 	end
 
-	#getter methods
-
-	def age
-		@age
-	end
-
-	def ethnicity
-		puts @ethnicity
-	end
-
 	#setter methods
-
-	def gender=(new_gender)
-		@gender = new_gender
-	end
 	
 	def celebrate_birthday=(new_age)
 		@age = new_age
@@ -63,3 +51,4 @@ bob.get_mad_at = "Dancer"
 # end 
 
 p santas
+
