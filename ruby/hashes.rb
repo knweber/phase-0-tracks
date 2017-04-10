@@ -1,8 +1,11 @@
 #RELEASE 0
 
-#1.
-#2.
-#3.
+newArr = []
+newArr.push(1) # => newArr = [1]
+p newArr[3] # => nil
+newArr.length # => 1
+newArr.delete(1) # => newArr = []
+
 
 #RELEASE 1
 
