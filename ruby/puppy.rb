@@ -8,6 +8,7 @@
 # Color: varies
 # Breed: varies
 # Signature sound: Woof!
+# Better than cat: yes
 
 # BEHAVIOR ----------
 # Run
