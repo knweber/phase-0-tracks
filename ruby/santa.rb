@@ -26,9 +26,9 @@ class Santa
 	end
 
 	def get_mad_at=(bad_reindeer)
-			@reindeer_ranking.delete(bad_reindeer)
-			@reindeer_ranking.push(bad_reindeer)
-			p @reindeer_ranking
+		@reindeer_ranking.delete(bad_reindeer)
+		@reindeer_ranking.push(bad_reindeer)
+		p @reindeer_ranking
 	end
 
 end
