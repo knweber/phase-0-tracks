@@ -37,6 +37,12 @@ class Santa
 		puts "Happy birthday! You are now #{@age} year(s) old!"
 	end
 
+	def get_mad_at=(bad_reindeer)
+			@reindeer_ranking.delete(bad_reindeer)
+			@reindeer_ranking.push(bad_reindeer)
+			p @reindeer_ranking
+	end
+
 end
 
 bob = Santa.new("transwoman", "Canadian")
@@ -46,6 +52,7 @@ puts "Bob is currently #{bob.age} years old."
 bob.celebrate_birthday = 1
 bob.ethnicity
 bob.age
+bob.get_mad_at = "Dancer"
 
 
 # santas = []
