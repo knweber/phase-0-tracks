@@ -24,13 +24,20 @@ class Puppy
 		end
 	end
 	
-def roll_over
+	def roll_over
 	  puts "*rolls over*"
 	end
-
+	
+	def dog_years(n)
+	  n*7
+	 end
+	
 end
 
 Sammy = Puppy.new
 
 Sammy.speak(10)
+
 Sammy.roll_over
+
+Sammy.dog_years(9)
