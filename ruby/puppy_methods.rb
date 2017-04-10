@@ -22,6 +22,15 @@ class Puppy
   def go_away_cat
 	puts "Woof! Go away cat!"
   end
-
+  
 end
 
+Sammy = Puppy.new
+
+Sammy.speak(10)
+
+Sammy.roll_over
+
+Sammy.dog_years(9)
+
+Sammy.go_away_cat
