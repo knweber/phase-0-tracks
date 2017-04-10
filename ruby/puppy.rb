@@ -24,8 +24,13 @@ class Puppy
 		end
 	end
 	
+def roll_over
+	  puts "*rolls over*"
+	end
+
 end
 
 Sammy = Puppy.new
 
-Sammy.speak(99)
+Sammy.speak(10)
+Sammy.roll_over
