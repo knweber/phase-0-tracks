@@ -1,8 +1,8 @@
 class Puppy
 
 	def fetch(toy)
-      puts "I brought back the #{toy}!"
-      toy
+		puts "I brought back the #{toy}!"
+		toy
   	end
 	
 	def speak(n)
@@ -12,19 +12,19 @@ class Puppy
 	end
 	
 	def roll_over
-	  puts "*rolls over*"
+		puts "*rolls over*"
 	end
 	
 	def dog_years(n)
-	  puts n*7
+		puts n*7
 	end
 	 
 	def go_away_cat
-	  puts "Woof! Go away cat!"
+		puts "Woof! Go away cat!"
 	 end
 	
 	def initialize
-	  puts "Initializing new puppy instance..."
+		puts "Initializing new puppy instance..."
 	end
 
 end
@@ -44,15 +44,15 @@ Sammy.go_away_cat
 class Runner
   
   def initialize
-    puts "Initializing new runner instance..."
+  	puts "Initializing new runner instance..."
   end 
   
   def old_shoes
-    puts "Time to buy new shoes!"
+  	puts "Time to buy new shoes!"
   end
   
   def five_k_time(mile_time_in_minutes)
-    puts mile_time_in_minutes*3.1
+  	puts mile_time_in_minutes*3.1
   end
   
 end
