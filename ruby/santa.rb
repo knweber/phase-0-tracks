@@ -12,13 +12,8 @@ class Santa
 		puts "Initializing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
-		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		age = 0
-	end
-
-	def celebrate_birthday
-		age += 1
-		puts "Happy birthday!"
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 	end
 
 	#getter methods
@@ -28,7 +23,7 @@ class Santa
 	end
 
 	def ethnicity
-		@ethnicity
+		puts @ethnicity
 	end
 
 	#setter methods
@@ -36,14 +31,21 @@ class Santa
 	def gender=(new_gender)
 		@gender = new_gender
 	end
+	
+	def celebrate_birthday=(new_age)
+		@age = new_age
+		puts "Happy birthday! You are now #{@age} year(s) old!"
+	end
 
 end
 
-Bob = Santa.new("transwoman", "Canadian")
-Bob.speak
-Bob.eat_milk_and_cookies("gingersnap")
-Bob.celebrate_birthday
-Bob.ethnicity
+bob = Santa.new("transwoman", "Canadian")
+bob.speak
+bob.eat_milk_and_cookies("gingersnap")
+puts "Bob is currently #{bob.age} years old."
+bob.celebrate_birthday = 1
+bob.ethnicity
+bob.age
 
 
 # santas = []
