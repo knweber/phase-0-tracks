@@ -42,21 +42,18 @@ puts bob.ethnicity
 bob.get_mad_at = "Dancer"
 
 
-santas = []
 example_genders = ["transwoman", "agender", "male", "genderqueer", "female", "trigender"]
 example_ethnicities = ["Maori", "Native American", "Russian", "Australian", "Canadian"]
 
 riley = Santa.new(example_genders.sample(1), example_ethnicities.sample(1))
 riley.celebrate_birthday = rand(140)
-santas << riley
+p riley
 
 chris = Santa.new(example_genders.sample(1), example_ethnicities.sample(1))
 chris.celebrate_birthday = rand(140)
-santas << chris
+p chris
 
 jordan = Santa.new(example_genders.sample(1), example_ethnicities.sample(1))
 jordan.celebrate_birthday = rand(140)
-santas << jordan
-
-p santas
+p jordan
 
