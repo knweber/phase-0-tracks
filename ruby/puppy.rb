@@ -15,3 +15,17 @@
 # Bark
 # Lick your face
 # Sleep
+
+class Puppy
+
+	def speak(n)
+		n.times do 
+		puts "Woof!"
+		end
+	end
+	
+end
+
+Sammy = Puppy.new
+
+Sammy.speak(99)
