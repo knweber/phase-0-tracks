@@ -10,3 +10,7 @@ module Shout
 
 end
 
+
+# driver code
+p Shout.yell_happily("Boo-yah")
+p Shout.yell_angrily("Crap")
