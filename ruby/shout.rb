@@ -42,6 +42,7 @@
 
  sergeant1 = Drill_sergeant.new
  terrible_toddler = Overexcited_child.new
+ 
  p sergeant1.yell_angrily("Give me 10 push-ups now")
  p sergeant1.yell_happily("You passed")
  p terrible_toddler.yell_happily("Time for candy")
