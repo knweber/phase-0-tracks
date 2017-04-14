@@ -93,6 +93,14 @@ my_list = update_quantities(my_list,"oranges",7)
 p my_list
 your_list = update_quantities(your_list,"pita",4)
 p your_list
+
 #Method 5
 
+def print_list(list)
+	list.each! do |item,quantity|
+		puts "#{item}: #{quantity}"
+	end
+end
 
+print_list(my_list)
+print_list(your_list)
