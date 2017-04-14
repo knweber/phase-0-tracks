@@ -118,3 +118,11 @@ my_list = remove_item(my_list,"lemonade")
 my_list = update_quantities(my_list,"ice_cream",1)
 
 print_list(my_list)
+
+#Release 4 -- Reflect
+# 1. What did you learn about pseudocode from working on this challenge?
+# 2. What are the tradeoffs of using arrays and hashes for this challenge?
+# 3. What does a method return?
+# 4. What kind of things can you pass into methods as arguments?
+# 5. How can you pass information between methods?
+# 6. What concepts were solidified in this challenge, and what concepts are still confusing?
