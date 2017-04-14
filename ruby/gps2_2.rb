@@ -38,3 +38,23 @@
 # 	Steps:
 # 		1. iterate through hash and print out each key/value pair to user-friendly list
 # 	Output: interpolated key and value in string --> "#{item_name}: #{quantity}"
+
+#Release 1 -- Initial Solution
+
+#Method 1
+
+def new_list(str,n=1)
+	list = {}
+	items = str.split(" ")
+	items.each do |item|
+		list[item] = n
+	end
+	list
+end
+
+#Method 2
+#Method 3
+#Method 4
+#Method 5
+
+
