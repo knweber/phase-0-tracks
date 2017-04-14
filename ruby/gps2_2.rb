@@ -118,3 +118,17 @@ my_list = remove_item(my_list,"lemonade")
 my_list = update_quantities(my_list,"ice_cream",1)
 
 print_list(my_list)
+
+#Release 4 -- Reflect (Kris' reflections)
+# 1. What did you learn about pseudocode from working on this challenge?
+	# I learned that the more specific the pseudocode, the more helpful it is in building the actual code. My pair and I first went through each method and wrote what we expected the input and output to be for each step. After doing this for each method, we then moved onto the 'steps' section. The more detail we could give in these steps, the easier it became to actually code that portion of the program.
+# 2. What are the tradeoffs of using arrays and hashes for this challenge?
+
+# 3. What does a method return?
+
+# 4. What kind of things can you pass into methods as arguments?
+	#You can pass in strings, hashes, arrays, integers, boolean values, optional parameters/default values (if not given by user), and other methods
+# 5. How can you pass information between methods?
+
+# 6. What concepts were solidified in this challenge, and what concepts are still confusing?
+
