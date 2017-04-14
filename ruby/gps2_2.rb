@@ -84,7 +84,15 @@ p your_list
 
 #Method 4
 
+def update_quantities(list,item,n)
+	list[item] = n
+	list
+end
 
+my_list = update_quantities(my_list,"oranges",7)
+p my_list
+your_list = update_quantities(your_list,"pita",4)
+p your_list
 #Method 5
 
 
