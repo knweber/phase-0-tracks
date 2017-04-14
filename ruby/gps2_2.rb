@@ -82,7 +82,7 @@ end
 # your_list = remove_item(your_list,"hummus")
 # p your_list
 
-#Method 4
+#Method 4 (now serves the purpose of method 2 as well)
 
 def update_quantities(list,item,n=1)
 	list[item] = n
