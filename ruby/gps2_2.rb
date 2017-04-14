@@ -52,10 +52,10 @@ def new_list(str,n=1)
 	list
 end
 
-my_list = new_list("apples oranges bananas")
-your_list = new_list("hummus carrots")
-p my_list
-p your_list
+# my_list = new_list("apples oranges bananas")
+# your_list = new_list("hummus carrots")
+# p my_list
+# p your_list
 
 #Method 2
 
@@ -64,11 +64,11 @@ def add_item(list,item,n=1)
 	list
 end
 
-my_list = add_item(my_list,"peaches",3)
-my_list = add_item(my_list, "pineapple",2)
-p my_list
-your_list = add_item(your_list,"pita")
-p your_list
+# my_list = add_item(my_list,"peaches",3)
+# my_list = add_item(my_list, "pineapple",2)
+# p my_list
+# your_list = add_item(your_list,"pita")
+# p your_list
 
 #Method 3
 
@@ -77,10 +77,10 @@ def remove_item(list,item)
 	list
 end
 
-my_list = remove_item(my_list,"apples")
-p my_list
-your_list = remove_item(your_list,"hummus")
-p your_list
+# my_list = remove_item(my_list,"apples")
+# p my_list
+# your_list = remove_item(your_list,"hummus")
+# p your_list
 
 #Method 4
 
@@ -89,18 +89,32 @@ def update_quantities(list,item,n)
 	list
 end
 
-my_list = update_quantities(my_list,"oranges",7)
-p my_list
-your_list = update_quantities(your_list,"pita",4)
-p your_list
+# my_list = update_quantities(my_list,"oranges",7)
+# p my_list
+# your_list = update_quantities(your_list,"pita",4)
+# p your_list
 
 #Method 5
 
 def print_list(list)
-	list.each! do |item,quantity|
+	list.each do |item,quantity|
 		puts "#{item}: #{quantity}"
 	end
 end
 
+# print_list(my_list)
+# print_list(your_list)
+
+#Release 2 -- Test
+
+my_list = new_list("lemonade tomatoes onions ice_cream")
+
+my_list = update_quantities(my_list,"lemonade",2)
+my_list = update_quantities(my_list,"tomatoes",3)
+my_list = update_quantities(my_list,"ice_cream",4)
+
+my_list = remove_item(my_list,"lemonade")
+
+my_list = update_quantities(my_list,"ice_cream",1)
+
 print_list(my_list)
-print_list(your_list)
