@@ -52,7 +52,24 @@ def new_list(str,n=1)
 	list
 end
 
+my_list = new_list("apples oranges bananas")
+your_list = new_list("hummus carrots")
+p my_list
+p your_list
+
 #Method 2
+
+def add_item(list,item,n=1)
+	list[item] = n
+	list
+end
+
+my_list = add_item(my_list,"peaches",3)
+my_list = add_item(my_list, "pineapple",2)
+p my_list
+your_list = add_item(your_list,"pita")
+p your_list
+
 #Method 3
 #Method 4
 #Method 5
