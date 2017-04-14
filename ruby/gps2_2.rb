@@ -123,12 +123,12 @@ print_list(my_list)
 # 1. What did you learn about pseudocode from working on this challenge?
 	# I learned that the more specific the pseudocode, the more helpful it is in building the actual code. My pair and I first went through each method and wrote what we expected the input and output to be for each step. After doing this for each method, we then moved onto the 'steps' section. The more detail we could give in these steps, the easier it became to actually code that portion of the program.
 # 2. What are the tradeoffs of using arrays and hashes for this challenge?
-
+	# My pair and I chose to use hashes because, unlike arrays that use only index values to access their elements, hashes take a key (which we put as the item on the grocery list), and a value (the quantity of the item needed at the grocery store). These two pieces of data made our grocery list much more readable and more like an actual list, rather than a collection of items and integers in an array with no rhyme or reason.
 # 3. What does a method return?
-
+	# A method returns the last line of code read by the program, usually an implicit return of a particular variable or data structure.
 # 4. What kind of things can you pass into methods as arguments?
-	#You can pass in strings, hashes, arrays, integers, boolean values, optional parameters/default values (if not given by user), and other methods
+	# You can pass in strings, hashes, arrays, integers, boolean values, optional parameters/default values (if not given by user), and other methods
 # 5. How can you pass information between methods?
-
+	# You can pass information between methods by storing the results of a certain method in a variable outside the method, and then reassigning the results of a different method to that same variable, or by passing in a method as another method's argument.
 # 6. What concepts were solidified in this challenge, and what concepts are still confusing?
-
+	# I feel much more comfortable with '.each do' blocks and with accessing items inside a hash. I still find refactoring a bit confusing -- I think I just need to get a bit more comfortable with Ruby so I know which shortcuts are available for me.
