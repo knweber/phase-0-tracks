@@ -71,7 +71,20 @@ your_list = add_item(your_list,"pita")
 p your_list
 
 #Method 3
+
+def remove_item(list,item)
+	list.delete(item)
+	list
+end
+
+my_list = remove_item(my_list,"apples")
+p my_list
+your_list = remove_item(your_list,"hummus")
+p your_list
+
 #Method 4
+
+
 #Method 5
 
 
