@@ -57,12 +57,12 @@ end
 # p my_list
 # p your_list
 
-#Method 2
+#Method 2 --> REFACTORED; COMBINED WITH METHOD 4 (add items AND update quantities -- I realized that I wasn't even using this method in my driver code, and so it probably is not necessary)
 
-def add_item(list,item,n=1)
-	list[item] = n
-	list
-end
+# def add_item(list,item,n=1)
+# 	list[item] = n
+# 	list
+# end
 
 # my_list = add_item(my_list,"peaches",3)
 # my_list = add_item(my_list, "pineapple",2)
@@ -84,7 +84,7 @@ end
 
 #Method 4
 
-def update_quantities(list,item,n)
+def update_quantities(list,item,n=1)
 	list[item] = n
 	list
 end
@@ -124,5 +124,6 @@ print_list(my_list)
 # 2. What are the tradeoffs of using arrays and hashes for this challenge?
 # 3. What does a method return?
 # 4. What kind of things can you pass into methods as arguments?
+		#You can pass in strings, hashes, arrays, integers, boolean values, other methods
 # 5. How can you pass information between methods?
 # 6. What concepts were solidified in this challenge, and what concepts are still confusing?
