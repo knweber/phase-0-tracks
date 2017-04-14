@@ -14,22 +14,27 @@
 # Method 2: add item to list
 # 	Input: list, item name, optional quantity
 # 	Steps:
-# 		1. Define method using mathod 1 as an argument (to provide hash)
+# 		1. Define method using hash as argument
 # 		2. One more required argument (item to add), one optional argument (quantity)
 # 		3. Add the item and its optional quantity to our hash
 # 	Output: store item name with optional quantity in hash
 
-Method 3: remove item from list
-	Input: selected key from hash, e.g. hash["carrots"], to delete
-	Steps:
-	Output: modified hash without the selected key/value pair
+# Method 3: remove item from list
+# 	Input: selected key from hash, e.g. hash["carrots"], to delete
+# 	Steps:
+# 		1. Take hash and item (key) to delete as argument
+# 		2. Delete item from hash using the key indicated
+# 	Output: modified hash without the selected key/value pair
 
-Method 4: Update quantities for items in list
-	Input: select key whose value we wish to change and provide updated quantity
-	Steps:
-	Output: modified hash with the updated quantity (value) of the chosen key
-	
-Method 5: Print list
-	Input: hash
-	Steps:
-	Output: interpolated key and value in string
+# Method 4: Update quantities for items in list
+# 	Input: select key whose value we wish to change and provide updated quantity
+# 	Steps: 
+# 		1. Take the hash, a particular key, and an updated value as arguments
+# 		2. Reassign new value to old value for key
+# 	Output: modified hash with the updated quantity (value) of the chosen key
+
+# Method 5: Print list
+# 	Input: hash
+# 	Steps:
+# 		1. iterate through hash and print out each key/value pair to user-friendly list
+# 	Output: interpolated key and value in string --> "#{item_name}: #{quantity}"
