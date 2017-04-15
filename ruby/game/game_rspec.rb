@@ -1,14 +1,19 @@
-require_relative "game"
+require_relative 'game'
 
 describe HangMan do 
-	let(:attempt) {HangMan.new}
+	let(:game1) {HangMan.new}
 
-	it "stores the correct word given on initialization" do
-		expect(attempt)
+	answer = "halloween"
+
+	it "converts correct word to string of dashes" do
+		expect(answer.hyphenate).to eq "---------"
 	end
 
 	it "checks letter given by user to see if it is included in correct word" do
-		expect(attempt.check_letter()).include? (guess)
+		attempt1 = "g"
+		expect(attempt1.check_letter("g")).to eq false
+		attempt2 = "l"
+		expect(attempt2.check_letter("l")).to eq true
 	end
 
 end

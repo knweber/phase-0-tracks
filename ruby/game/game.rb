@@ -18,33 +18,41 @@
 
 # RELEASE 2 -- BUILD GAME
 class HangMan
-	attr_reader :guess_count :is_over
+	attr_reader :guess_count 
+	attr_reader :is_over
 
 	def initialize
 		@guess_count = 0
 		@is_over = false
 	end
 
+	def hyphenate(str)
+		# letters_in_answer = str.split('')
+		# letters_in_answer.each do |n|
+		# 	p "-"
+		# end
+	end
+
 	def check_letter(index)
 	end
-	
+
 end
 #user interface
-puts "Are you ready to play?"
-game = HangMan.new
+# puts "Are you ready to play?"
+# game = HangMan.new
 
-puts "Player One, which word do you choose?"
-answer = gets.chomp
+# puts "Player One, which word do you choose?"
+# answer = gets.chomp
 
-puts "Player Two, here is your first hint:"
-letters_in_answer = answer.split('')
-letters_in_answer.each do |n|
-	p "-"
-end
+# puts "Player Two, here is your first hint:"
+# letters_in_answer = answer.split('')
+# letters_in_answer.each do |n|
+# 	p "-"
+# end
 
-puts "Player Two, what is your first guess?"
-guess = gets.chomp
+# puts "Player Two, what is your first guess?"
+# guess = gets.chomp
 
-puts "Sorry, you lost!"
+# puts "Sorry, you lost!"
 
-puts "Congratulations! You won the game in #{game.guess_count} guesses!"
+# puts "Congratulations! You won the game in #{game.guess_count} guesses!"
