@@ -20,18 +20,24 @@
 class HangMan
 	attr_reader :guess_count 
 	attr_reader :is_over
-	attr_accessor :attempt 
-	attr_accessor :answer
-	attr_accessor :hyphenated_answer
-	attr_accessor :hyphenated_str
+	attr_reader :correct_guesses
+	attr_reader :incorrect_guesses
+	attr_reader :answer 
+	attr_reader :attempt 
+	# attr_accessor :hyphenated_answer
+	# attr_accessor :hyphenated_str
 
 	def initialize(answer,attempt)
-		@guess_count = 0
-		@is_over = false
-		@attempt = attempt
 		@answer = answer
-		@hyphenated_answer = hyphenated_answer
-		@hyphenated_str = hyphenated_str
+		@attempt = attempt
+		@guess_count = 0
+		@correct_guesses = []
+		@incorrect_guesses = []
+		@is_over = false
+		
+		
+		# @hyphenated_answer = hyphenated_answer
+		# @hyphenated_str = hyphenated_str
 	end
 
 	def hyphenate
@@ -45,23 +51,61 @@ class HangMan
 	end
 
 	def check_letter
-		hyphenated_str = hyphenated_answer
-		until hyphenated_str = answer || @guess_count == hyphenated_str.length+1
-			if answer.include? (attempt)
-				attempt_index = answer.index(attempt)
-				hyphenated_str[attempt_index] = attempt
-				@guess_count += 1
-			elsif hyphenated_str.include? (attempt)
-				puts "Please guess a different letter"
-				@guess_count += 0	
-			else
-				@guess_count += 1
-				puts "Sorry! That letter is not in the word. Guess again!"
-			end
+		#@hyphenated_str = @hyphenated_answer #starts off as equal, since no letters have been added
+		#until @hyphenated_str == @answer
+		if @answer.include?(@attempt)
+			#@correct_guesses << @attempt
+			# p @attempt
+			# attempt_index = @answer.index(@attempt)
+			# p attempt_index
+			# @hyphenated_str.insert[attempt_index] = @attempt
+			# @hyphenated_answer = @hyphenated_str
+			@guess_count += 1
+			p attempt
+			# p @hyphenated_answer
+		else
+			puts "Sorry! That letter is not in the word. Guess again!"
+			#@incorrect_guesses << @attempt
+			@guess_count += 1
 		end
-		hyphenated_str
 	end
-end
+	#end
+
+		# hyphenated_str = hyphenated_answer
+		# 	until @is_over == true
+		# 		if answer.include? (attempt)
+		# 			attempt_index = answer.index(attempt)
+		# 			hyphenated_str[attempt_index] = attempt
+		# 			hyphenated_answer = hyphenated_str
+		# 			@guess_count += 1
+		# 		elsif hyphenated_str.include? (attempt)
+		# 			puts "Please guess a different letter"
+		# 			@guess_count += 0	
+		# 		elsif
+		# 			puts "Sorry! That letter is not in the word. Guess again!"
+		# 			@guess_count += 1
+		# 		end
+		# 	end
+		#	@hyphenated_answer
+	
+@hyphenated_answer
+@hyphenated_str = "" #string built by adding in correct letters
+		
+	def add_letter
+	end
+
+	def game_over
+		if @guess_count < @answer.length+1 || @hyphenated_str == @answer
+			@is_over = true
+		else
+			@is_over = false
+	end
+
+	end
+	end
+
+# while !is_over
+# 	if!
 #user interface
 # puts "Are you ready to play?"
 # game = HangMan.new
