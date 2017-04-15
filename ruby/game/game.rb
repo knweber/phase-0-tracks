@@ -17,3 +17,27 @@
 # you lost!' if they do not guess correctly within the number of guesses
 
 # RELEASE 2 -- BUILD GAME
+class HangMan
+	attr_reader :guess_count :is_over
+
+	def initialize
+		@guess_count = 0
+		@is_over = false
+	end
+
+	#user interface
+puts "Are you ready to play?"
+game = HangMan.new
+
+puts "Player One, which word do you choose?"
+answer = gets.chomp
+
+puts "Player Two, here is your first hint:"
+letters_in_answer = answer.split('')
+letters_in_answer.each do |n|
+	p "-"
+end
+
+puts "Sorry, you lost!"
+
+puts "Congratulations! You won the game in #{game.guess_count} guesses!"
