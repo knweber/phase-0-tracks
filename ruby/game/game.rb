@@ -23,25 +23,28 @@ class HangMan
 	attr_accessor :attempt 
 	attr_accessor :answer
 
-	def initialize
+	def initialize(answer,attempt)
 		@guess_count = 0
 		@is_over = false
 		@attempt = attempt
 		@answer = answer
 	end
 
-	def hyphenate(str)
-		# letters_in_answer = str.split('')
-		# letters_in_answer.each do |n|
-		# 	p "-"
-		# end
+	def hyphenate
+		hyphenated_str = ""
+		index = 0
+		while index < @answer.length
+			hyphenated_str += "-"
+			index +=1
+		end
+		hyphenated_str
 	end
 
 	def check_letter(letter)
-		if 
-		elsif
-		else
-		@guess_count += 1
+		# if 
+		# elsif
+		# else
+		# @guess_count += 1
 	end
 
 end
