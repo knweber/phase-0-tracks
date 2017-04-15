@@ -25,7 +25,11 @@ class HangMan
 		@is_over = false
 	end
 
-	#user interface
+	def check_letter(index)
+	end
+	
+end
+#user interface
 puts "Are you ready to play?"
 game = HangMan.new
 
@@ -37,6 +41,9 @@ letters_in_answer = answer.split('')
 letters_in_answer.each do |n|
 	p "-"
 end
+
+puts "Player Two, what is your first guess?"
+guess = gets.chomp
 
 puts "Sorry, you lost!"
 
