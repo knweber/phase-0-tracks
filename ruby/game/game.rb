@@ -20,10 +20,14 @@
 class HangMan
 	attr_reader :guess_count 
 	attr_reader :is_over
+	attr_accessor :attempt 
+	attr_accessor :answer
 
 	def initialize
 		@guess_count = 0
 		@is_over = false
+		@attempt = attempt
+		@answer = answer
 	end
 
 	def hyphenate(str)
@@ -33,7 +37,11 @@ class HangMan
 		# end
 	end
 
-	def check_letter(index)
+	def check_letter(letter)
+		if 
+		elsif
+		else
+		@guess_count += 1
 	end
 
 end
