@@ -22,31 +22,45 @@ class HangMan
 	attr_reader :is_over
 	attr_accessor :attempt 
 	attr_accessor :answer
+	attr_accessor :hyphenated_answer
+	attr_accessor :hyphenated_str
 
 	def initialize(answer,attempt)
 		@guess_count = 0
 		@is_over = false
 		@attempt = attempt
 		@answer = answer
+		@hyphenated_answer = hyphenated_answer
+		@hyphenated_str = hyphenated_str
 	end
 
 	def hyphenate
-		hyphenated_str = ""
+		hyphenated_answer = ""
 		index = 0
 		while index < @answer.length
-			hyphenated_str += "-"
+			hyphenated_answer += "-"
 			index +=1
+		end
+		hyphenated_answer
+	end
+
+	def check_letter
+		hyphenated_str = hyphenated_answer
+		until hyphenated_str = answer || @guess_count == hyphenated_str.length+1
+			if answer.include? (attempt)
+				attempt_index = answer.index(attempt)
+				hyphenated_str[attempt_index] = attempt
+				@guess_count += 1
+			elsif hyphenated_str.include? (attempt)
+				puts "Please guess a different letter"
+				@guess_count += 0	
+			else
+				@guess_count += 1
+				puts "Sorry! That letter is not in the word. Guess again!"
+			end
 		end
 		hyphenated_str
 	end
-
-	def check_letter(letter)
-		# if 
-		# elsif
-		# else
-		# @guess_count += 1
-	end
-
 end
 #user interface
 # puts "Are you ready to play?"

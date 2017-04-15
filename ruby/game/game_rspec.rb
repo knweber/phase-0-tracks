@@ -8,7 +8,7 @@ describe HangMan do
 	end
 
 	it "checks letter given by user to see if it is included in correct word" do
-		expect(attempt.check_letter("g")).to eq false
+		expect(game1.check_letter).to eq false
 	end
 
 end
