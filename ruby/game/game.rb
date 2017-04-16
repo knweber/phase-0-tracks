@@ -61,12 +61,12 @@ class HangMan
 	end
 	
 @hyphenated_str = "" #string built by adding in correct letters
+@correct_guesses
 
 	def add_letter(correct_guesses,answer)
-		(answer.split('').map! do |letter|
-			if @correct_guesses.include?(letter)
-				@hyphenated_answer[letter] = letter 
-				p @hyphenated_answer
+		(answer.split('').map! do |n|
+			if @correct_guesses.include?(n)
+			  @hyphenated_answer[answer.index(n)] = n
 			else
 				'-'
 			end
@@ -143,3 +143,7 @@ class HangMan
 # puts "Sorry, you lost!"
 
 # puts "Congratulations! You won the game in #{game.guess_count} guesses!"
+game1 = HangMan.new
+game1.hyphenate("halloween")
+game1.check_letter("halloween", "w")
+game1.add_letter(["h","a"],"halloween")
