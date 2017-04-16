@@ -18,57 +18,46 @@
 
 # RELEASE 2 -- BUILD GAME
 class HangMan
-	attr_reader :guess_count 
+	attr_accessor :guess_count 
 	attr_reader :is_over
 	attr_reader :correct_guesses
 	attr_reader :incorrect_guesses
 	attr_reader :answer 
 	attr_reader :attempt 
-	# attr_accessor :hyphenated_answer
-	# attr_accessor :hyphenated_str
 
-	def initialize(answer,attempt)
+	def initialize
 		@answer = answer
 		@attempt = attempt
 		@guess_count = 0
 		@correct_guesses = []
 		@incorrect_guesses = []
 		@is_over = false
-		
-		
-		# @hyphenated_answer = hyphenated_answer
-		# @hyphenated_str = hyphenated_str
 	end
 
-	def hyphenate
+	def hyphenate(answer)
 		hyphenated_answer = ""
 		index = 0
-		while index < @answer.length
+		while index < answer.length
 			hyphenated_answer += "-"
 			index +=1
 		end
 		hyphenated_answer
 	end
 
-	def check_letter
-		#@hyphenated_str = @hyphenated_answer #starts off as equal, since no letters have been added
-		#until @hyphenated_str == @answer
-		if @answer.include?(@attempt)
-			#@correct_guesses << @attempt
-			# p @attempt
-			# attempt_index = @answer.index(@attempt)
-			# p attempt_index
-			# @hyphenated_str.insert[attempt_index] = @attempt
-			# @hyphenated_answer = @hyphenated_str
-			@guess_count += 1
-			p attempt
-			# p @hyphenated_answer
+		def check_letter(answer,attempt)
+		@correct_guesses = []
+		while @guess_count < answer.length
+		if answer.include?(attempt)
+			@correct_guesses << attempt
+			break
 		else
 			puts "Sorry! That letter is not in the word. Guess again!"
-			#@incorrect_guesses << @attempt
 			@guess_count += 1
 		end
 	end
+	@correct_guesses
+	end
+	
 	#end
 
 		# hyphenated_str = hyphenated_answer
@@ -87,21 +76,38 @@ class HangMan
 		# 		end
 		# 	end
 		#	@hyphenated_answer
-	
+
+@correct_guesses	
 @hyphenated_answer
 @hyphenated_str = "" #string built by adding in correct letters
-		
-	def add_letter
+
+	def add_letter(correct_guesses,answer)
+		split_answer = answer.split('')
+		#hyphenated_str = split_answer.map! do 
+			index = 0
+			while index < answer.length
+			if correct_guesses.include?(answer[index])
+				hyphenated_str[index] = answer[index]
+			else
+				hyphenated_str[index] = '-'
+			end
+		end
+		hyphenated_str.join('')
 	end
 
 	def game_over
-		if @guess_count < @answer.length+1 || @hyphenated_str == @answer
+		if @guess_count < @answer.length+1
 			@is_over = true
+			puts "You ran out of guesses!"
+		elsif @hyphenated_str == @answer
+			@is_over = true
+			puts "You won!"
 		else
 			@is_over = false
+			puts "You lost!"
+		end
 	end
 
-	end
 	end
 
 # while !is_over
