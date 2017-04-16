@@ -20,22 +20,24 @@
 class HangMan
 	attr_accessor :guess_count 
 	attr_reader :is_over
-	attr_reader :correct_guesses
+	attr_accessor :correct_guesses
 	attr_reader :hyphenated_answer
 	attr_reader :answer 
 	attr_reader :attempt 
 	attr_reader :location
 
-	def initialize
+	def initialize(answer)
 		@answer = answer
-		@attempt = attempt
+		@attempt = ""
 		@guess_count = 0
 		@correct_guesses = []
+		@incorrect_guesses = []
 		@is_over = false
 		@location = location
+		hyphenate
 	end
 
-	def hyphenate(answer)
+	def hyphenate
 		@hyphenated_answer = ""
 		index = 0
 		while index < answer.length
@@ -45,105 +47,62 @@ class HangMan
 		@hyphenated_answer
 	end
 
-	def check_letter(answer,attempt)
-		@correct_guesses = []
-		while @guess_count < answer.length
-			if answer.include?(attempt)
-				@correct_guesses << attempt
-				break
-			else
-				puts "Sorry! That letter is not in the word. Guess again!"
+	def check_letter(attempt)
+		if @guess_count < answer.length
+			if @correct_guesses.include?(attempt) || @incorrect_guesses.include?(attempt)
+				p "You already guessed that letter!"
+			elsif answer.include?(attempt)
+				@correct_guesses.push(attempt)
 				@guess_count += 1
-			break
+				add_letter(attempt)
+			elsif !answer.include?(attempt)
+				@guess_count += 1
+				@incorrect_guesses.push(attempt)
+				p "Sorry! That letter is not in the word. Guess again!"
 			end
+		else
+		  return "Sorry, you're out of guesses!"
 		end
-		@correct_guesses
 	end
 	
 @hyphenated_str = "" #string built by adding in correct letters
 @correct_guesses
 
-	def add_letter(correct_guesses,answer)
-		(answer.split('').map! do |n|
-			if @correct_guesses.include?(n)
-			  @hyphenated_answer[answer.index(n)] = n
+	def add_letter(correct_guesses)
+		(answer.split('').each_index.map do |n|
+			if correct_guesses.include?(answer[n])
+			  @hyphenated_answer[n] = answer[n]
 			else
 				'-'
 			end
 		end).join('')
 	end
-	# 	index = 0
-	# 	while index < split_answer.length
-	# 		if split_answer.include?(@correct_guesses[index])
-	# 			@character = correct_guesses[index]
-	# 			@location = split_answer.index(@character)
-	# 			@hyphenated_answer.split!('')
-	# 			@hyphenated_answer[location] = @character
-	# 			@hyphenated_answer.join('')
-	# 		end
-	# 		break
-	# 	end
-	# 	p @hyphenated_answer
-	# end
 
 	def game_over
-		if @guess_count < @answer.length+1
-			@is_over = true
-			puts "You ran out of guesses!"
-		elsif @hyphenated_str == @answer
-			@is_over = true
+	  puts @guess_count
+		if @guess_count <= answer.length && @hyphenated_answer == @answer
 			puts "You won!"
+			true
+		elsif @guess_count == answer.length && @hyphenated_answer != @answer
+		  puts "You're out of guesses!"
+		  true
 		else
-			@is_over = false
-			puts "You lost!"
+		  false
 		end
 	end
-
-	end
-
-	#end
-
-		# hyphenated_str = hyphenated_answer
-		# 	until @is_over == true
-		# 		if answer.include? (attempt)
-		# 			attempt_index = answer.index(attempt)
-		# 			hyphenated_str[attempt_index] = attempt
-		# 			hyphenated_answer = hyphenated_str
-		# 			@guess_count += 1
-		# 		elsif hyphenated_str.include? (attempt)
-		# 			puts "Please guess a different letter"
-		# 			@guess_count += 0	
-		# 		elsif
-		# 			puts "Sorry! That letter is not in the word. Guess again!"
-		# 			@guess_count += 1
-		# 		end
-		# 	end
-		#	@hyphenated_answer
+end
 
 
+puts "Player One, which word do you choose?"
+chosen_word = gets.chomp
+game1 = HangMan.new(chosen_word)
+puts "Player Two, here is your first hint:"
+p game1.hyphenated_answer
 
-# while !is_over
-# 	if!
-#user interface
-# puts "Are you ready to play?"
-# game = HangMan.new
+until game1.game_over == true
+  puts "Player Two, what is your guess?"
+  guessed_letter = gets.chomp
+  game1.check_letter(guessed_letter)
+  p game1.hyphenated_answer
+end
 
-# puts "Player One, which word do you choose?"
-# answer = gets.chomp
-
-# puts "Player Two, here is your first hint:"
-# letters_in_answer = answer.split('')
-# letters_in_answer.each do |n|
-# 	p "-"
-# end
-
-# puts "Player Two, what is your first guess?"
-# guess = gets.chomp
-
-# puts "Sorry, you lost!"
-
-# puts "Congratulations! You won the game in #{game.guess_count} guesses!"
-game1 = HangMan.new
-game1.hyphenate("halloween")
-game1.check_letter("halloween", "w")
-game1.add_letter(["h","a"],"halloween")
