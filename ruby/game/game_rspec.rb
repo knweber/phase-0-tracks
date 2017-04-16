@@ -8,11 +8,11 @@ describe HangMan do
 	end
 
 	it "checks letter given by user to see if it is included in correct word" do
-		expect(game1.check_letter("halloween", "a")).to eq ["a"]
+		expect(game1.check_letter("halloween", "b")).to eq []
 	end
 
 	it "fills in the dashed answer with the correct letters" do 
-		expect(game1.add_letter(["a","h"],"halloween")).to eq "ha-------"
+		expect(game1.add_letter(["h","a"],"halloween")).to eq "ha-------"
 	end
 
 end

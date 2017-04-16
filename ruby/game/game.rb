@@ -21,43 +21,86 @@ class HangMan
 	attr_accessor :guess_count 
 	attr_reader :is_over
 	attr_reader :correct_guesses
-	attr_reader :incorrect_guesses
+	attr_reader :hyphenated_answer
 	attr_reader :answer 
 	attr_reader :attempt 
+	attr_reader :location
 
 	def initialize
 		@answer = answer
 		@attempt = attempt
 		@guess_count = 0
 		@correct_guesses = []
-		@incorrect_guesses = []
 		@is_over = false
+		@location = location
 	end
 
 	def hyphenate(answer)
-		hyphenated_answer = ""
+		@hyphenated_answer = ""
 		index = 0
 		while index < answer.length
-			hyphenated_answer += "-"
+			@hyphenated_answer += "-"
 			index +=1
 		end
-		hyphenated_answer
+		@hyphenated_answer
 	end
 
-		def check_letter(answer,attempt)
+	def check_letter(answer,attempt)
 		@correct_guesses = []
 		while @guess_count < answer.length
-		if answer.include?(attempt)
-			@correct_guesses << attempt
+			if answer.include?(attempt)
+				@correct_guesses << attempt
+				break
+			else
+				puts "Sorry! That letter is not in the word. Guess again!"
+				@guess_count += 1
 			break
-		else
-			puts "Sorry! That letter is not in the word. Guess again!"
-			@guess_count += 1
+			end
 		end
-	end
-	@correct_guesses
+		@correct_guesses
 	end
 	
+@hyphenated_str = "" #string built by adding in correct letters
+
+	def add_letter(correct_guesses,answer)
+		(answer.split('').map! do |letter|
+			if @correct_guesses.include?(letter)
+				@hyphenated_answer[letter] = letter 
+				p @hyphenated_answer
+			else
+				'-'
+			end
+		end).join('')
+	end
+	# 	index = 0
+	# 	while index < split_answer.length
+	# 		if split_answer.include?(@correct_guesses[index])
+	# 			@character = correct_guesses[index]
+	# 			@location = split_answer.index(@character)
+	# 			@hyphenated_answer.split!('')
+	# 			@hyphenated_answer[location] = @character
+	# 			@hyphenated_answer.join('')
+	# 		end
+	# 		break
+	# 	end
+	# 	p @hyphenated_answer
+	# end
+
+	def game_over
+		if @guess_count < @answer.length+1
+			@is_over = true
+			puts "You ran out of guesses!"
+		elsif @hyphenated_str == @answer
+			@is_over = true
+			puts "You won!"
+		else
+			@is_over = false
+			puts "You lost!"
+		end
+	end
+
+	end
+
 	#end
 
 		# hyphenated_str = hyphenated_answer
@@ -77,38 +120,7 @@ class HangMan
 		# 	end
 		#	@hyphenated_answer
 
-@correct_guesses	
-@hyphenated_answer
-@hyphenated_str = "" #string built by adding in correct letters
 
-	def add_letter(correct_guesses,answer)
-		split_answer = answer.split('')
-		#hyphenated_str = split_answer.map! do 
-			index = 0
-			while index < answer.length
-			if correct_guesses.include?(answer[index])
-				hyphenated_str[index] = answer[index]
-			else
-				hyphenated_str[index] = '-'
-			end
-		end
-		hyphenated_str.join('')
-	end
-
-	def game_over
-		if @guess_count < @answer.length+1
-			@is_over = true
-			puts "You ran out of guesses!"
-		elsif @hyphenated_str == @answer
-			@is_over = true
-			puts "You won!"
-		else
-			@is_over = false
-			puts "You lost!"
-		end
-	end
-
-	end
 
 # while !is_over
 # 	if!
