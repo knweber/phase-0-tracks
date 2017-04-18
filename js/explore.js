@@ -7,3 +7,10 @@
 // 		4. Loop through the array and add each letter to the end of the new array
 // 		5. Join all the letters together to create a string
 // Output: the string, reversed ("olleh")
+
+function reverse(str) {
+	letterArray = str.split('')
+	
+}
+
+reverse("halloween")
