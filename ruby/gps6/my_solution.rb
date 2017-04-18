@@ -18,15 +18,15 @@ class VirusPredictor
 
 # calls the methods that predicts the speed of spread and number of deaths 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths #(@population_density, @population, @state)
+    speed_of_spread #(@population_density, @state)
   end
 
   private
 
 # predicts how many deaths based on the states population density
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths #(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -46,7 +46,7 @@ class VirusPredictor
 
 # takes the population density and predicts how many months it will take to spread across the state
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -80,7 +80,9 @@ state_array = []
   state_array << outbreak
  end
 
- p state_array
+ state_array.each do |state|
+  state.virus_effects
+end
 
 
 # alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
