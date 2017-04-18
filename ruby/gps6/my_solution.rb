@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Aaron Stack-Barnes].
+# We spent [1.5] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # require relative builds on the default method require and allows the code to like to a file that is not in the root ruby folder instead it is some where relative to where the code is written
@@ -84,19 +84,26 @@ state_array = []
   state.virus_effects
 end
 
-
-# alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
-# alabama.virus_effects
-
-# jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-# jersey.virus_effects
-
-# california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-# california.virus_effects
-
-# alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-# alaska.virus_effects
-
-
 #=======================================================================
 # Reflection Section
+
+#1. What are the differences between the two different hash syntaxes shown in the state_data file?
+
+    #One syntax uses the hash rocket (e.g. :key => "value") and the other uses a simple colon (e.g. key: "value"). This second is more useful for hashes where the keys and values are simpler, for example, name: "Kris". The syntax with the hash rocket is better if your data is more complex, like if you were using nested data structures.
+
+#2. What does require_relative do? How is it different from require?
+
+    #Require allows the programmer to access libraries and other file extensions in the Ruby gem. Require_relative, on the other hand, allows you access to a file (e.g. a testing file) in the directory in which you are currently working.
+
+#3. What are some ways to iterate through a hash?
+    
+    #You can iterate through a hash by using .each do |key, value| blocks, .each_key do |key| blocks, and .each_value do |value| blocks.
+
+#4. When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+    #I realized that you don't need to pass in the variables to every method as arguments, since they are already declared during initialization.
+
+#5. What concept did you most solidify in this challenge?
+
+    #Looping through hashes and refactoring
+
