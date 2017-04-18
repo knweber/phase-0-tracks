@@ -26,7 +26,7 @@ class VirusPredictor
 
 # predicts how many deaths based on the states population density
 
-  def predicted_deaths #(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -46,7 +46,7 @@ class VirusPredictor
 
 # takes the population density and predicts how many months it will take to spread across the state
 
-  def speed_of_spread #(population_density, state) #in months
+  def speed_of_spread
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
