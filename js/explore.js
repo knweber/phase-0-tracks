@@ -17,4 +17,5 @@ function reverse(str) {
 	return "".concat(...reversedArray)
 }
 
-console.log(reverse("halloween"))
+firstWord = reverse("halloween")
+console.log(firstWord)
