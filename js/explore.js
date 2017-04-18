@@ -17,5 +17,10 @@ function reverse(str) {
 	return "".concat(...reversedArray)
 }
 
+// driver code
+
 firstWord = reverse("halloween")
-console.log(firstWord)
+
+if ("abc".length === 3) {
+	console.log(firstWord);
+}
