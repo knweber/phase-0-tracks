@@ -9,8 +9,12 @@
 // Output: the string, reversed ("olleh")
 
 function reverse(str) {
-	letterArray = str.split('')
-	
+	var reversedArray = [];
+	var letterArray = str.split('');
+	for (i=0; i<letterArray.length; i++) {
+		reversedArray.unshift(letterArray[i]);
+	}
+	return "".concat(...reversedArray)
 }
 
-reverse("halloween")
+console.log(reverse("halloween"))
