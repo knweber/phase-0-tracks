@@ -10,8 +10,14 @@
 // Output: longest string in array
 
 function longestString(arr) {
-
-};
+	var longest = ""
+	for (i=0;i<arr.length;i++) {
+		if (arr[i].length > longest.length) {
+		  longest = arr[i];
+		}
+	}
+	return longest;
+}
 
 longestString(["apple","yoyo","Pennsylvania","yogurt"]);
 
@@ -19,13 +25,13 @@ longestString(["apple","yoyo","Pennsylvania","yogurt"]);
 
 // RELEASE 1: KEY-VALUE MATCH
 
-Input: two objects
-Steps: 
-Output: 'true' if they share a key-value pair; 'false' if they do not
+// Input: two objects
+// Steps: 
+// Output: 'true' if they share a key-value pair; 'false' if they do not
 
 
 // RELEASE 2: GENERATE RANDOM DATA
 
-Input: integer (e.g. 7)
-Steps:
-Output: array of strings of the given integer length (e.g. 7)
+// Input: integer (e.g. 7)
+// Steps:
+// Output: array of strings of the given integer length (e.g. 7)
