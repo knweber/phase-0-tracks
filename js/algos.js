@@ -19,6 +19,8 @@ function longestString(arr) {
 	return longest;
 }
 
+// driver code
+
 console.log(longestString(["apple","yoyo","Pennsylvania","yogurt"]));
 console.log(longestString(["ab","cd","ef","ghi","jk"]));
 
@@ -58,13 +60,15 @@ var luna {
 	name: "Luna"
 };
 
+// driver code
+
 matching(harry,luna);
 
 // RELEASE 2: GENERATE RANDOM DATA
 
 // Input: integer (e.g. 7)
 // Steps:
-// 	1. Create array holding letters of the alphabet
+// 	1. Create string holding letters of the alphabet
 // 	2. Create empty array to hold the generated words
 // 	3. Until the computer reaches the same number of loops as the integer...
 // 	4. Generate a random number between 0 and 1
@@ -78,7 +82,31 @@ matching(harry,luna);
 // 	12. Repeat for the remaining words, as given by the initial integer
 // Output: array of n strings with random lengths and letters
 
+function randomWordGenerator(n) {
+	var alphabet = "abcdefghijklmnopqrstuvwxyz";
+	var randomWords = [];
+	for (i=0;i<n;i++) {
+		var randomLength = Math.floor((Math.random() * 10) + 1);
+		var randomWord = '';
+			for (j=0;j<randomLength;j++) {
+				var randomLetterIndex = Math.floor((Math.random() * 26) + 1);
+				var randomLetter = alphabet.substring(randomLetterIndex,randomLetterIndex+1);
+				randomWord = randomWord + randomLetter;
+			}
+			randomWords.push(randomWord);
+	}
+ return randomWords;
+}
 
+(randomWordGenerator(5));
+
+// driver code
+
+for (var i = 0;i<10;i++) {
+	var testArr = randomWordGenerator(4);
+	console.log(testArr);
+	console.log(longestString(testArr));
+}
 
 
 
