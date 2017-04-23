@@ -34,27 +34,24 @@ console.log(longestString(["ab","cd","ef","ghi","jk"]));
 	// 2. 
 // Output: 'true' if they share a key-value pair; 'false' if they do not
 
-
 function matching(obj1,obj2) {
-	for i in obj1 {
-		for j in obj2 {
-			if (obj1[i] === obj2[j]) {
-				true;
+	for (var i in obj1) {
+		for (var j in obj2) {
+			if (obj1[i] === obj2[j] && i === j) {
+				return true;
 			}
-			else {
-				false;
 			}
 		}
-	}
+ 	return false;
 }
 
-var harry {
+var harry = {
 	name: "Harry",
 	hairColor: "brown",
 	school: "Hogwarts"
 };
 
-var luna {
+var luna = {
 	hairColor: "blonde",
 	school: "Hogwarts",
 	name: "Luna"
@@ -62,7 +59,7 @@ var luna {
 
 // driver code
 
-matching(harry,luna);
+(matching(harry,luna));
 
 // RELEASE 2: GENERATE RANDOM DATA
 
