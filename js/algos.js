@@ -99,17 +99,12 @@ function randomWordGenerator(n) {
 
 // driver code
 
-for (var i = 0;i<10;i++) {
+function driver() {
+  for (var i = 0;i<10;i++) {
 	var testArr = randomWordGenerator(4);
 	console.log(testArr);
 	console.log(longestString(testArr));
-}
+}}
 
-
-
-
-
-
-
-
+driver();
 
