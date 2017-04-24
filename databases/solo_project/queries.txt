@@ -1,0 +1,15 @@
+1. Display information in one table
+
+SELECT * FROM ballet_dancers;
+1|Misty Copeland|Firebird|2
+2|Wendy Whelan|Afternoon of a Faun|1
+3|Carla Korbes|Swan Lake|3
+4|Sara Mearns|Jewels|1
+
+2. Update an item that meets some condition
+
+3. Display the information in both tables using one query
+
+4. Display a narrower selection of columns
+
+5. Delete an item that meets some condition
