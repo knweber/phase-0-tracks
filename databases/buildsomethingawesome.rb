@@ -13,13 +13,43 @@ SQL
 
 db.execute(create_table_cmd)
 
+def create_movie_listing(db, title, rating, watch_again)
+	 db.execute("INSERT INTO movies (title, rating, watch_again) VALUES (?, ?, ?)", [title, rating, watch_again])
+end
 
-puts "Hello there! Welcome to your personalized movie rating database. Please enter the title of the last movie you saw. If you wish to exit, type 'exit.'"
-first_answer = gets.chomp
+# user interface
 
-puts "What rating do you believe this movie deserves?"
-rating = gets.chomp
+puts "Hello there! Welcome to your personalized movie rating database. Do you wish to enter a movie? If so, type 'y'. Otherwise, type 'n'."
+@first_answer = gets.chomp
 
-puts "Would you see this movie again? (y/n)"
-see_again = gets.chomp
+@title = ""
 
+def over
+	if @first_answer.downcase == "y"
+		false
+	elsif @first_answer.downcase == "n" 
+		puts "Thank you. Goodbye!"
+		true
+	end
+end
+
+until over == true
+	puts "Please enter a movie title. If you wish to exit, type 'exit'."
+	@title = gets.chomp
+		if @title == "exit"
+			puts "Thank you. Goodbye!"
+			break
+		end
+	puts "What rating do you believe this movie deserves, on a scale from 0-10?"
+	rating = gets.chomp
+	puts "Would you see this movie again? (y/n)"
+	see_again = gets.chomp
+		if see_again == "y"
+			true
+		else
+			false
+		end
+	create_movie_listing(db, @title, rating, see_again)
+end
+		
+	
