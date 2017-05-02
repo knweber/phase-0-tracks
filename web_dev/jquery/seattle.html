@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	$(document).ready(function() {
-	});
-
-	</script>
 	<title>Page about Seattle, WA</title>
 </head>
 <body>
+<div class="intro">
 <h1><em>Exploring the Pacific Northwest</em></h1>
+<table class="image">
+<caption align="bottom">Click me!</caption>
+<tr><td><img class="fade" src="https://media-cdn.tripadvisor.com/media/photo-s/03/9b/30/26/seattle.jpg"/></td></tr></table>
 <h2><strong>Seattle, Washington</strong></h2>
+<img class="gif" style="display: none" src="https://media.giphy.com/media/JAHkDSnzec2NW/giphy.gif"/>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$( "img.fade" ).mouseover(function() {
+			$( this ).fadeOut( 100 );
+			$( this ).fadeIn( 500 );
+			$( "h2" ).slideUp( "slow", function () {
+			});
+			$( "h2" ).slideDown( "slow", function () {
+			});
+		});
+		$ ( "img.fade" ).click(function() {
+			$( "img.gif" ).show( "slow" );
+		});
+	});
+</script>
+
 </body>
 </html>
